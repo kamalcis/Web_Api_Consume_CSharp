@@ -37,8 +37,8 @@ namespace Web_Api_Consume_CSharp
                 HttpResponseMessage response = await client.GetAsync("api/UrlGeneration/" + id); // api/Controller/Parameter
                 response.EnsureSuccessStatusCode();
 
-                string url = await response.Content.ReadAsAsync<String>();
-                Console.WriteLine(url);
+                string data = await response.Content.ReadAsAsync<String>();
+                Console.WriteLine(data);
 
             }
             catch (HttpRequestException ex)
